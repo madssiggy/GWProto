@@ -11,17 +11,21 @@ public class Manager : MonoBehaviour
     public float y = 700f;
     public GameObject exit;
     public Exit script;
+    public GameObject Player;
+    public Player PlayerScript;
 
     // Use this for initialization
     void Start()
     {
         exit = GameObject.Find("Exit");
+        Player = GameObject.Find("player");
         NewMethod();
     }
 
     private void NewMethod()
     {
         script = exit.GetComponent<Exit>();
+        PlayerScript = Player.GetComponent<Player>();
     }
 
 
@@ -32,6 +36,7 @@ public class Manager : MonoBehaviour
             CreateText();
         }
     }
+    
     void CreateText()
     {
 

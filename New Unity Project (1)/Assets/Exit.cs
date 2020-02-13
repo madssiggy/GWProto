@@ -7,6 +7,7 @@ public class Exit : MonoBehaviour
 {
     public bool isTouch;
     public bool isClear;
+
     private void Start()
     {
         isClear = false;

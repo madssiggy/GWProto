@@ -5,10 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	public float speed = 3.0f;
+    public bool SonorMode;
 	// Start is called before the first frame update
 	void Start()
     {
-        
+        SonorMode = false;
     }
 
     // Update is called once per frame
@@ -30,5 +31,11 @@ public class Player : MonoBehaviour
 		{
 			transform.position -= transform.right * speed * Time.deltaTime;
 		}
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            SonorMode = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space)) {
+            SonorMode = false;
+        }
 	}
 }
